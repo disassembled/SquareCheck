@@ -4,7 +4,7 @@ let btnEvaluate = $("#btnEvaluate");
 btnEvaluate.click(function () {
     $.ajax({
         type: "GET",
-        url: "Home/IsSquareNumber/" + txtInput.value,
+        url: "Home/IsSquareNumber/" + txtInput.val(),
         success: function (response) {
             console.log(response);
         },

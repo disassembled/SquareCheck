@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Maths;
+using Microsoft.AspNetCore.Mvc;
 using SquareCheck.Models;
 using System.Diagnostics;
 
@@ -31,9 +32,8 @@ namespace SquareCheck.Controllers
 
         public JsonResult IsSquareNumber(string strNumber)
         {
-            var result = true;
+            var result = Calculator.Evaluate(strNumber);
             return Json(result);
         }
-
     }
 }

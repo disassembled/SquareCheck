@@ -1,4 +1,6 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿let txtInput = $("#txtInput");
+let btnEvaluate = $("#btnEvaluate");
 
-// Write your JavaScript code.
+btnEvaluate.click(function () {
+    console.log(txtInput.val());
+});

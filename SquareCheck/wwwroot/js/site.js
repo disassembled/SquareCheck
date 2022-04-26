@@ -2,5 +2,14 @@
 let btnEvaluate = $("#btnEvaluate");
 
 btnEvaluate.click(function () {
-    console.log(txtInput.val());
+    $.ajax({
+        type: "GET",
+        url: "Home/IsSquareNumber/" + txtInput.value,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (response) {
+            console.log(response);
+        }
+    });
 });

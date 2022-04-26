@@ -28,5 +28,12 @@ namespace SquareCheck.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public JsonResult IsSquareNumber(string strNumber)
+        {
+            var result = true;
+            return Json(result);
+        }
+
     }
 }
